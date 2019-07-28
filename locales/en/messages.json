@@ -41,7 +41,7 @@
     },
     "portOverrideText": {
         "message": "Port:"
-    },    
+    },
     "autoConnect": {
         "message": "Auto-Connect"
     },
@@ -103,7 +103,7 @@
         "message": "Hrvatski (hr)",
         "description": "Don't translate!!!"
     },
-    
+
     "language_id": {
         "message": "Bahasa Indonesia (id)",
         "description": "Don't translate!!!"
@@ -1403,6 +1403,9 @@
     "portsFunction_RUNCAM_DEVICE_CONTROL": {
         "message": "Camera (RunCam Protocol)"
     },
+    "portsFunction_MEDIAPLAYER_DEVICE_CONTROL": {
+        "message": "MP3 Player (DFRobot Protocol)"
+    },
     "pidTuningProfileOption": {
         "message": "Profile $1"
     },
@@ -1454,11 +1457,11 @@
     },
     "pidTuningDMin": {
         "message": "D Min",
-       "description": "Table header of the D Min feature in the PIDs tab" 
+       "description": "Table header of the D Min feature in the PIDs tab"
     },
     "pidTuningDMinRoll": {
        "message": "Roll",
-       "description": "Axis to apply D Min feature" 
+       "description": "Axis to apply D Min feature"
     },
     "pidTuningDMinPitch": {
        "message": "Pitch",
@@ -2427,7 +2430,7 @@
     },
     "dataflashLogsSpace": {
         "message": "Free space for logs"
-    },    
+    },
     "dataflashNote": {
         "message": "Flight logs can be recorded to your flight controller's onboard dataflash chip."
     },
@@ -2479,25 +2482,25 @@
     "dataflashFileWriteFailed": {
         "message": "Failed to write to the file you selected, are the permissions on that folder okay?"
     },
-    
+
     "sdcardStatusNoCard": {
         "message": "No card inserted"
-    },    
+    },
     "sdcardStatusReboot": {
         "message": "Fatal error<br>Reboot to retry"
-    },    
+    },
     "sdcardStatusReady": {
         "message": "Card ready"
-    },    
+    },
     "sdcardStatusStarting": {
         "message": "Card starting..."
-    },    
+    },
     "sdcardStatusFileSystem": {
         "message": "Filesystem starting..."
-    },    
+    },
     "sdcardStatusUnknown": {
         "message": "Unknown state $1"
-    },    
+    },
 
     "firmwareFlasherReleaseSummaryHead": {
         "message": "Release info"
@@ -2592,7 +2595,7 @@
     },
     "firmwareFlasherBaudRate": {
         "message": "Baud Rate"
-    },    
+    },
     "firmwareFlasherShowDevelopmentReleases":{
         "message": "Show unstable releases"
     },
@@ -3118,7 +3121,7 @@
     },
     "pidTuningDTermLowpassFiltersGroup": {
         "message": "D Term Lowpass Filters"
-    },    
+    },
     "pidTuningDTermLowpassType": {
         "message": "D Term Lowpass 1 Filter Type"
     },
@@ -3142,7 +3145,7 @@
     },
     "pidTuningDTermNotchFiltersGroup": {
         "message": "D Term Notch Filters"
-    },    
+    },
     "pidTuningDTermNotchFrequency": {
         "message": "D Term Notch Filter Center Frequency [Hz]"
     },
@@ -3151,7 +3154,7 @@
     },
     "pidTuningYawLospassFiltersGroup": {
         "message": "Yaw Lowpass Filters"
-    },    
+    },
     "pidTuningYawLowpassFrequency": {
         "message": "Yaw Lowpass Cutoff Frequency [Hz]"
     },
@@ -3772,7 +3775,7 @@
     "osdSetupUploadingFontEnd": {
         "message": "Uploaded all {{length}} characters to the OSD"
     },
-    
+
     "osdSetupSave": {
         "message": "Save"
     },
@@ -4253,7 +4256,7 @@
     "osdDescElementRssiDbmValue": {
         "message": "Value in dBm of the RSSI signal if available"
     },
-    
+
     "osdTextElementUnknown": {
         "message": "Unknown $1",
         "description": "One of the elements of the OSD"
@@ -4859,6 +4862,21 @@
     },
     "modeCameraChangeMode": {
         "message": "CAMERA CHANGE MODE"
+    },
+    "mediaplayerKeyPlay": {
+        "message": "MP3 Player Play/Pause"
+    },
+    "mediaplayerKeyNext": {
+        "message": "MP3 Player Next"
+    },
+    "mediaplayerKeyPrevious": {
+        "message": "MP3 Player Previous"
+    },
+    "mediaplayerKeyVolumeUp": {
+        "message": "MP3 Player Volume Up"
+    },
+    "mediaplayerKeyVolumeDown": {
+        "message": "MP3 Player Volume Down"
     },
     "flashTab": {
         "message": "Update Firmware"

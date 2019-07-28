@@ -25,8 +25,25 @@ function adjustBoxNameIfPeripheralWithModeID(modeId, defaultName) {
         default:
             return defaultName;
         }
-    } 
-    
+    }
+
+    if (isPeripheralSelected("MEDIAPLAYER_DEVICE_CONTROL")) {
+      switch(modeId) {
+        case 50: // BOXMEDIAPLAYERPLAY
+          return i18n.getMessage('mediaplayerKeyPlay');
+        case 51: // BOXMEDIAPLAYERNEXT
+          return i18n.getMessage('mediaplayerKeyNext');
+        case 52: // BOXMEDIAPLAYERPREV
+          return i18n.getMessage('mediaplayerKeyPrevious');
+        case 53: // BOXMEDIAPLAYERVOLU
+          return i18n.getMessage('mediaplayerKeyVolumeUp');
+        case 54: // BOXMEDIAPLAYERVOLD
+          return i18n.getMessage('mediaplayerKeyVolumeDown');
+        default:
+          return defaultName;
+      }
+    }
+
     return defaultName;
-    
+
 }

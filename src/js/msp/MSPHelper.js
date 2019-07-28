@@ -24,7 +24,8 @@ function MspHelper () {
     'TELEMETRY_IBUS': 12,
     'IRC_TRAMP': 13,
     'RUNCAM_DEVICE_CONTROL': 14, // support communitate with RunCam Device
-    'LIDAR_TF': 15
+    // 'LIDAR_TF': 15
+    'MEDIAPLAYER_DEVICE_CONTROL': 15, // support to communicate with DFRobot MP3 Player
   };
 
     self.REBOOT_TYPES = {
@@ -909,7 +910,7 @@ MspHelper.prototype.process_data = function(dataHandler) {
                     RX_CONFIG.airModeActivateThreshold = 0;
                 }
 
-                
+
                 break;
 
             case MSPCodes.MSP_FAILSAFE_CONFIG:
@@ -1035,7 +1036,7 @@ MspHelper.prototype.process_data = function(dataHandler) {
                                     ADVANCED_TUNING.feedforwardPitch = data.readU16();
                                     ADVANCED_TUNING.feedforwardYaw   = data.readU16();
                                     ADVANCED_TUNING.antiGravityMode  = data.readU8();
-                                    
+
                                     if (semver.gte(CONFIG.apiVersion, "1.41.0")) {
                                         ADVANCED_TUNING.dMinRoll = data.readU8();
                                         ADVANCED_TUNING.dMinPitch = data.readU8();
@@ -2057,7 +2058,7 @@ MspHelper.prototype.sendModeRanges = function(onCompleteCallback) {
 
         if (semver.gte(CONFIG.apiVersion, "1.41.0")) {
             var modeRangeExtra = MODE_RANGES_EXTRA[modeRangeIndex];
-            
+
             buffer.push8(modeRangeExtra.modeLogic)
                 .push8(modeRangeExtra.linkedTo);
         }
@@ -2111,7 +2112,7 @@ MspHelper.prototype.sendVoltageConfig = function(onCompleteCallback) {
     var nextFunction = send_next_voltage_config;
 
     var configIndex = 0;
-    
+
     if (VOLTAGE_METER_CONFIGS.length == 0) {
         onCompleteCallback();
     } else {
@@ -2142,7 +2143,7 @@ MspHelper.prototype.sendCurrentConfig = function(onCompleteCallback) {
     var nextFunction = send_next_current_config;
 
     var configIndex = 0;
-    
+
     if (CURRENT_METER_CONFIGS.length == 0) {
         onCompleteCallback();
     } else {
