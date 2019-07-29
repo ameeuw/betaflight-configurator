@@ -49,8 +49,8 @@ TABS.ports.initialize = function (callback, scrollPosition) {
         functionRules.push({ name: 'RUNCAM_DEVICE_CONTROL', groups: ['peripherals'], maxPorts: 1 });
     }
 
-    // TODO: Change apiVersion numbers! 
-    if (semver.gte(CONFIG.apiVersion, "1.36.0")) {
+    // TODO: Change apiVersion numbers!
+    if (semver.gte(CONFIG.apiVersion, "1.43.0")) {
         functionRules.push({ name: 'MEDIAPLAYER_DEVICE_CONTROL', groups: ['peripherals'], maxPorts: 1 });
     }
 
