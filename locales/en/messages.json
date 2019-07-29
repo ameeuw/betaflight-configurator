@@ -4863,8 +4863,8 @@
     "modeCameraChangeMode": {
         "message": "CAMERA CHANGE MODE"
     },
-    "mediaplayerKeyPlay": {
-        "message": "MP3 Player Play/Pause"
+    "mediaplayerKeyPause": {
+        "message": "MP3 Player Pause"
     },
     "mediaplayerKeyNext": {
         "message": "MP3 Player Next"

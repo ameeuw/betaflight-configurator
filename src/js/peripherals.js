@@ -30,7 +30,7 @@ function adjustBoxNameIfPeripheralWithModeID(modeId, defaultName) {
     if (isPeripheralSelected("MEDIAPLAYER_DEVICE_CONTROL")) {
       switch(modeId) {
         case 50: // BOXMEDIAPLAYERPLAY
-          return i18n.getMessage('mediaplayerKeyPlay');
+          return i18n.getMessage('mediaplayerKeyPause');
         case 51: // BOXMEDIAPLAYERNEXT
           return i18n.getMessage('mediaplayerKeyNext');
         case 52: // BOXMEDIAPLAYERPREV
