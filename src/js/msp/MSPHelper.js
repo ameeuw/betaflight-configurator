@@ -24,8 +24,8 @@ function MspHelper () {
     'TELEMETRY_IBUS': 12,
     'IRC_TRAMP': 13,
     'RUNCAM_DEVICE_CONTROL': 14, // support communitate with RunCam Device
-    // 'LIDAR_TF': 15
-    'MEDIAPLAYER_DEVICE_CONTROL': 15, // support to communicate with DFRobot MP3 Player
+    'LIDAR_TF': 15
+    'MEDIAPLAYER_DEVICE_CONTROL': 16, // support to communicate with DFRobot MP3 Player
   };
 
     self.REBOOT_TYPES = {
@@ -1653,7 +1653,7 @@ MspHelper.prototype.crunch = function(code) {
                     buffer.push8(serialPort.identifier);
 
                     var functionMask = self.serialPortFunctionsToMask(serialPort.functions);
-                    buffer.push16(functionMask)
+                    buffer.push32(functionMask)
                         .push8(self.BAUD_RATES.indexOf(serialPort.msp_baudrate))
                         .push8(self.BAUD_RATES.indexOf(serialPort.gps_baudrate))
                         .push8(self.BAUD_RATES.indexOf(serialPort.telemetry_baudrate))
