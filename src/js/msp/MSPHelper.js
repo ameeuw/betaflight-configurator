@@ -24,7 +24,7 @@ function MspHelper () {
     'TELEMETRY_IBUS': 12,
     'IRC_TRAMP': 13,
     'RUNCAM_DEVICE_CONTROL': 14, // support communitate with RunCam Device
-    'LIDAR_TF': 15
+    'LIDAR_TF': 15,
     'MEDIAPLAYER_DEVICE_CONTROL': 16, // support to communicate with DFRobot MP3 Player
   };
 
@@ -798,13 +798,13 @@ MspHelper.prototype.process_data = function(dataHandler) {
                     SERIAL_CONFIG.gpsPassthroughBaudRate = data.readU32();
                 } else {
                     SERIAL_CONFIG.ports = [];
-                    var bytesPerPort = 1 + 2 + (1 * 4);
+                    var bytesPerPort = 1 + 4 + (1 * 4);
                     var serialPortCount = data.byteLength / bytesPerPort;
 
                     for (var i = 0; i < serialPortCount; i++) {
                         var serialPort = {
                             identifier: data.readU8(),
-                            functions: self.serialPortFunctionMaskToFunctions(data.readU16()),
+                            functions: self.serialPortFunctionMaskToFunctions(data.readU32()),
                             msp_baudrate: self.BAUD_RATES[data.readU8()],
                             gps_baudrate: self.BAUD_RATES[data.readU8()],
                             telemetry_baudrate: self.BAUD_RATES[data.readU8()],
