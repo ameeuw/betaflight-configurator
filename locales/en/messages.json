@@ -4639,6 +4639,13 @@
     "osdWarningTextUnknown": {
         "message": "Unknown $1"
     },
+    "osdWarningTextMpdeviceStatus": {
+        "message": "Blink last mediaplayer command.",
+        "description": "One of the warnings that can be selected to be shown in the OSD"
+    },
+    "osdWarningMpdeviceStatus": {
+        "message": "Blinks the last MP3 player command."
+    },
     "osdWarningUnknown": {
         "message": "Unknown warning (details to be added in a future release)"
     },
